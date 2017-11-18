@@ -1,0 +1,47 @@
+cmake_minimum_required(3.2)
+project(PlatformDetect)
+
+// internal Varibale
+MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")  
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Linux")  
+    MESSAGE(STATUS "current platform: Linux ")  
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Windows")  
+    MESSAGE(STATUS "current platform: Windows")  
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")  
+    MESSAGE(STATUS "current platform: FreeBSD")  
+ELSE ()  
+    MESSAGE(STATUS "other platform: ${CMAKE_SYSTEM_NAME}")  
+ENDIF (CMAKE_SYSTEM_NAME MATCHES "Linux") 
+
+// BOOL Variable
+IF (WIN32)  
+    MESSAGE(STATUS "Now is windows")  
+ELSEIF (APPLE)  
+    MESSAGE(STATUS "Now is Apple systens.")  
+ELSEIF (UNIX)  
+    MESSAGE(STATUS "Now is UNIX-like OS's. Including aPPLE os x  and CygWin")  
+ELSEIF (BORLAND)
+	MESSAGE(STATUS "Now is BORLAND"
+ELSEIF (MSVC)
+	MESSAGE(STATUS "Now is MSVC")
+ENDIF()
+
+// CPU
+IF (CMAKE_SYSTEM_PROCESSOR STREQUAL "arm")
+	MESSAGE(STATUS "x86_64")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "ARM_ARCH_7A")
+	MESSAGE(STATUS "ARM_ARCH_7A")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64")
+	MESSAGE(STATUS "aarch64")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "i386")
+	MESSAGE(STATUS "i386")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64")
+	MESSAGE(STATUS "x86_64")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "mips")
+	MESSAGE(STATUS "mips")
+ELSEIF (CMAKE_SYSTEM_PROCESSOR STREQUAL "mips64")
+	MESSAGE(STATUS "mips64")
+ENDIF()
+
+add_executable(platformDetect platformDetect.cc)

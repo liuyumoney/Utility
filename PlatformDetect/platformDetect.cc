@@ -9,16 +9,16 @@ int main() {
     printf("arm7a");
 #endif
 #if defined(__aarch64__)
-    printf("__aarch64__\n");
+    printf("aarch64\n");
 #endif
 #if defined(__i386__)
-    printf("__i386__\n");
+    printf("i386\n");
 #endif
 #if defined(__x86_64__)
-    printf("__x86_64__\n");
+    printf("x86_64\n");
 #endif
 #if defined(__mips__)
-    printf("__mips__\n");
+    printf("mips\n");
 #endif
 #if defined(__mips64__)
     printf("mips64\n");
@@ -32,7 +32,7 @@ int main() {
     printf("Linux\n");
 #endif
 #if defined(__unix__)
-    printf("__unix__\n");
+    printf("unix\n");
 #endif
 #if defined(__posix__)
     printf("POSIX\n");

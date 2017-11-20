@@ -5,8 +5,14 @@ int main() {
 #if defined(__arm__)
     printf("arm\n");
 #endif
+#if defined(__armv7a__)
+	printf("armv7a");
+#endif
+#if defined(__armv7l__)
+	printf("armv7l");
+#endif
 #if defined(__ARM_ARCH_7A__)
-    printf("arm7a");
+    printf("ARM_ARCH_7A\n");
 #endif
 #if defined(__aarch64__)
     printf("aarch64\n");

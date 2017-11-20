@@ -5,11 +5,11 @@ int main() {
 #if defined(__arm__)
     printf("arm\n");
 #endif
-#if defined(__armv7a__)
-	printf("armv7a");
+#if defined(__armv7a__)  // not sure this exist
+	printf("armv7a\n");
 #endif
-#if defined(__armv7l__)
-	printf("armv7l");
+#if defined(__armv7l__)  // not sure this exist
+	printf("armv7l\n");
 #endif
 #if defined(__ARM_ARCH_7A__)
     printf("ARM_ARCH_7A\n");
